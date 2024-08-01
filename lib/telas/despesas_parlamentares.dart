@@ -14,7 +14,7 @@ class _ParliamentaryExpensesScreenState
 
   String _name = 'Eduardo Paes';
   String _party = 'PT';
-  String _year = '2024'; // Set the year to 2024 and make it non-editable
+  String _year = '2024';
   String _month = '';
 
   @override
