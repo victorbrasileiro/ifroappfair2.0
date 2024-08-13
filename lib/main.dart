@@ -335,7 +335,7 @@ class _TelaInicialState extends State<TelaInicial> {
                             child: Padding(
                               padding: const EdgeInsets.all(14.0),
                               child: Image.asset(
-                                "assets/images/ana.png",
+                                "assets/images/gustavo.png",
                                 fit: BoxFit.fitHeight,
                               ),
                             ),
@@ -355,7 +355,7 @@ class _TelaInicialState extends State<TelaInicial> {
                               child: Column(
                                 children: [
                                   Text(
-                                    'Ana Beatriz',
+                                    'Gustavo Dias',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w700,
@@ -364,7 +364,7 @@ class _TelaInicialState extends State<TelaInicial> {
                                     textAlign: TextAlign.center,
                                   ),
                                   Text(
-                                    'Programadora',
+                                    'Programador',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w700,
@@ -411,7 +411,7 @@ class _TelaInicialState extends State<TelaInicial> {
                             child: Padding(
                               padding: const EdgeInsets.all(14.0),
                               child: Image.asset(
-                                "assets/images/marcello.png",
+                                "assets/images/vitoria.png",
                                 fit: BoxFit.fitHeight,
                               ),
                             ),
@@ -431,7 +431,7 @@ class _TelaInicialState extends State<TelaInicial> {
                               child: Column(
                                 children: [
                                   Text(
-                                    'Marcello Brasileiro',
+                                    'Vitória Cristine',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w700,
@@ -440,7 +440,7 @@ class _TelaInicialState extends State<TelaInicial> {
                                     textAlign: TextAlign.center,
                                   ),
                                   Text(
-                                    'Programador',
+                                    'Programadora',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w700,
@@ -487,7 +487,7 @@ class _TelaInicialState extends State<TelaInicial> {
                             child: Padding(
                               padding: const EdgeInsets.all(14.0),
                               child: Image.asset(
-                                "assets/images/marcello.png",
+                                "assets/images/levir.png",
                                 fit: BoxFit.fitHeight,
                               ),
                             ),
@@ -507,7 +507,7 @@ class _TelaInicialState extends State<TelaInicial> {
                               child: Column(
                                 children: [
                                   Text(
-                                    'Marcello Brasileiro',
+                                    'Levir Menezes',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w700,
