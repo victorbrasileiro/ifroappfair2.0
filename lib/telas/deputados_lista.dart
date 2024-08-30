@@ -90,7 +90,15 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
   Widget build(BuildContext context) {
     return Scaffold (
         appBar: AppBar(
-            title: Text('Lista de Deputados')
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+              color: Color.fromARGB(255, 255, 255, 255),
+              fontSize: 26,
+              fontWeight: FontWeight.w700),
+          backgroundColor: const Color.fromARGB(255, 2, 132, 199),
+          title: const Text(
+            'DEPUTADOS',
+          ),
         ),
         body: _deputados.isEmpty
             ? Center(child: CircularProgressIndicator())
@@ -106,8 +114,31 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
                 ano = (dataAtual.year - 1).toString();
               }
 
-              return ListTile(
-                title: Text(deputado.nome),
+              return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                  decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey, width: 1.0),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.person,
+                    size: 40,
+                    color: Colors.grey),
+                  title: Text(
+                    deputado.nome,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                    ),
+                  ),
+                  subtitle: Text(
+                    deputado.siglaPartido,
+                    style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
+                ),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -120,6 +151,7 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
                             )),
                   );
                 },
+                ),
               );
             }
         )

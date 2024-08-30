@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'deputados_lista.dart';
@@ -100,18 +102,46 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Center(child: Text('Resultado Despesas', style: TextStyle(fontWeight: FontWeight.bold),)),
-      ),
+        appBar: AppBar(
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+              color: Color.fromARGB(255, 255, 255, 255),
+              fontSize: 26,
+              fontWeight: FontWeight.w700),
+          backgroundColor: const Color.fromARGB(255, 2, 132, 199),
+          title: const Text(
+            'DESPESAS',
+          ),
+        ),
       body: _despesas.isEmpty
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
               itemCount: _despesas.length,
               itemBuilder: (context, index) {
                 final despesa = _despesas[index];
-                return ListTile(
-                  title: Text('Descrição: ${despesa.tipoDespesa}'),
-                  subtitle: Text('Valor: ${despesa.valorLiquido}'),
+                return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey, width: 1.0),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: ListTile(
+                  leading: const Icon(
+                      Icons.description_sharp,
+                      size: 40,
+                  ),
+                  title: Text('${despesa.tipoDespesa}',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
+                  subtitle: Text('VALOR:  ${despesa.valorLiquido}',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18),
+                  ),
+                  ),
                 );
               },
       )
