@@ -128,7 +128,7 @@ class _TelaInicialState extends State<TelaInicial> {
                         padding: EdgeInsets.all(10.0),
                         child: Center(
                           child: Text(
-                            'Bem-Vindo ao portal da transparência dos  deputados de Rondônia. Aqui você vai encontrar os dados fornecidos pela câmara no ano de 2024. ',
+                            'Bem-Vindo ao portal da transparência dos deputados de Rondônia. Aqui você vai encontrar os dados fornecidos pela câmara no ano de 2024. ',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w700,

@@ -136,7 +136,7 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
                       fontSize: 16,
                     ),
                   ),
-                  subtitle: Text('VALOR:  ${despesa.valorLiquido}',
+                  subtitle: Text('VALOR: R\$ ${despesa.valorLiquido}',
                   style: const TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18),

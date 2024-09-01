@@ -57,6 +57,7 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
 
   Future<void> _fetchDeputados() async {
     if (widget.lista){
+      //final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
       final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
     }else{
       final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados/deputado')
@@ -121,10 +122,12 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: ListTile(
-                  leading: const Icon(
-                    Icons.person,
-                    size: 40,
-                    color: Colors.grey),
+                  leading: Image.network(
+                    deputado.urlFoto, // Substitua pela URL da sua imagem
+                    width: 40, // Largura da imagem
+                    height: 50, // Altura da imagem
+                    fit: BoxFit.cover, // Ajusta a imagem de acordo com o espaço disponível
+                  ),
                   title: Text(
                     deputado.nome,
                     style: const TextStyle(
