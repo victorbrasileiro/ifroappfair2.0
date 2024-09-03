@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
+import 'package:projetoflutter/telas/deputados_lista_delegate.dart';
 import 'despesas_deputados_lista.dart';
 
 class Deputado {
@@ -100,6 +100,17 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
           title: const Text(
             'DEPUTADOS',
           ),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {
+                showSearch(
+                  context: context,
+                  delegate: DeputadoSearchDelegate(_deputados),
+                );
+              },
+            ),
+          ],
         ),
         body: _deputados.isEmpty
             ? Center(child: CircularProgressIndicator())
