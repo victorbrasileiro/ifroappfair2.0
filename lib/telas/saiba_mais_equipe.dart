@@ -45,8 +45,23 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                           'EQUIPE DE DESENVOLVIMENTO',
                           style: TextStyle(
                             fontSize: 23,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black87
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black87,
+                            fontFamily: 'Arial',
+                          ),
+                        ),
+
+                        // estilização do titulo
+                        Text(
+                          'EQUIPE DE DESENVOLVIMENTO',
+                          style: TextStyle(
+                            decoration: TextDecoration.overline,
+                            decorationColor: const Color.fromARGB(255, 5, 118, 133),
+                            decorationThickness: 6.0,
+                            fontSize: 23,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontFamily: 'Arial',
                           ),
                         ),
                       ],
@@ -55,7 +70,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
 
             // CONTAINER INTEGRANTE MARCELLO
             Padding(
-              padding: const EdgeInsets.all(7.0),
+              padding: const EdgeInsets.all(1.0),
               child: Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
@@ -64,7 +79,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 370,
+                    height: 330,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 1.0),
                     ),
@@ -77,12 +92,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 270,
                           child: Padding(
-                            padding: const EdgeInsets.all(14.0),
+                            padding: const EdgeInsets.all(30.0),
                             child: Image.asset(
                               "assets/images/marcello.png",
                               fit: BoxFit.fitHeight,
@@ -95,12 +110,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 80,
                           child: const Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.only(top: 0),
                             child: Column(
                               children: [
                                 Text(
@@ -108,7 +123,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 23,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -117,7 +133,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 18,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -134,7 +151,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
 
             // CONTAINER INTEGRANTE GUSTAVO
             Padding(
-              padding: const EdgeInsets.all(7.0),
+              padding: const EdgeInsets.all(1.0),
               child: Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
@@ -143,10 +160,11 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 370,
+                    height: 330,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 1.0),
                     ),
+
                   ),
                   Column(
                     children: [
@@ -155,12 +173,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 270,
                           child: Padding(
-                            padding: const EdgeInsets.all(14.0),
+                            padding: const EdgeInsets.all(30.0),
                             child: Image.asset(
                               "assets/images/gustavo.png",
                               fit: BoxFit.fitHeight,
@@ -173,12 +191,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 80,
                           child: const Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.only(top: 0),
                             child: Column(
                               children: [
                                 Text(
@@ -186,7 +204,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 23,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -195,7 +214,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 18,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -212,7 +232,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
 
             //CONTAINER INTEGRANTE VITORIA
             Padding(
-              padding: const EdgeInsets.all(7.0),
+              padding: const EdgeInsets.all(1.0),
               child: Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
@@ -221,7 +241,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 370,
+                    height: 330,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 1.0),
                     ),
@@ -233,12 +253,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 270,
                           child: Padding(
-                            padding: const EdgeInsets.all(14.0),
+                            padding: const EdgeInsets.all(30.0),
                             child: Image.asset(
                               "assets/images/vitoria.png",
                               fit: BoxFit.fitHeight,
@@ -251,12 +271,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 80,
                           child: const Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.only(top: 0),
                             child: Column(
                               children: [
                                 Text(
@@ -264,7 +284,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 23,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -273,7 +294,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 18,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -290,7 +312,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
 
             // CONTAINER INTEGRANTE LEVIR
             Padding(
-              padding: const EdgeInsets.all(7.0),
+              padding: const EdgeInsets.all(1.0),
               child: Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
@@ -299,7 +321,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 370,
+                    height: 330,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 1.0),
                     ),
@@ -311,12 +333,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 270,
                           child: Padding(
-                            padding: const EdgeInsets.all(14.0),
+                            padding: const EdgeInsets.all(30.0),
                             child: Image.asset(
                               "assets/images/levir.png",
                               fit: BoxFit.fitHeight,
@@ -329,12 +351,12 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6),
-                            color: Colors.white,
+                            //color: Colors.white,
                           ),
                           width: 300,
                           height: 80,
                           child: const Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.only(top: 0),
                             child: Column(
                               children: [
                                 Text(
@@ -342,7 +364,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 23,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -351,7 +374,8 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17,
+                                    fontSize: 18,
+                                    fontFamily: 'Times New Roman',
                                   ),
                                   textAlign: TextAlign.center,
                                 ),

@@ -122,18 +122,21 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
               }
 
               return Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 5.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                   decoration: BoxDecoration(
                   border: Border.all(color: Colors.blueGrey, width: 1.5),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: ListTile(
+                  // imagem do deputado
                   leading: Image.network(
                     deputado.urlFoto,
-                    width: 53, // Largura da imagem
+                    width: 50, // Largura da imagem
                     height: 60, // Altura da imagem
                     fit: BoxFit.cover,
                   ),
+
+                  // nome do deputado
                   title: Text(
                     deputado.nome,
                     style: const TextStyle(
@@ -141,6 +144,8 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
                       fontSize: 25,
                     ),
                   ),
+
+                  // partido do deputado
                   subtitle: Text(
                     deputado.siglaPartido,
                     style: const TextStyle(

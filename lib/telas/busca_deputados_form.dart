@@ -41,9 +41,9 @@ class BuscaDeputadosForm extends StatefulWidget {
 class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
   final _formKey = GlobalKey<FormState>();
 
-  String _nome    = 'Eduardo Paes';
-  String _partido = 'PT';
-  String _ano     = '2024';
+  String _nome    = '';
+  String _partido = '';
+  String _ano     = '';
   String _mes     = '';
 
   @override
