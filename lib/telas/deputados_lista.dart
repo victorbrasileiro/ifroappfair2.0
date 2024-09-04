@@ -56,24 +56,19 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
   }
 
   Future<void> _fetchDeputados() async {
-    if (widget.lista){
-      //final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
-      final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
-    }else{
-      final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados/deputado')
-        .replace(queryParameters: {
-          'nome': widget.nome,
-          'partido': widget.partido
-        })
-      );
-    }
+    // if (widget.lista){
+    //   //final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
+    //   final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
+    // }else{
+    //   final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados/deputado')
+    //     .replace(queryParameters: {
+    //       'nome': widget.nome,
+    //       'partido': widget.partido
+    //     })
+    //   );
+    // }
 
-    final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados')
-        .replace(queryParameters: {
-          'nome': widget.nome,
-          'partido': widget.partido
-        })
-    );
+    final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
 
     if  (response.statusCode == 200) {
       final Map<String, dynamic> jsonData = json.decode(response.body);

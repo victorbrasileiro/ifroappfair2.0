@@ -7,22 +7,22 @@ import 'dart:convert';
 
 class DespesaDeputado {
   final int ano;
-  final String cnpjCpfFornecedor;
+  final int mes;
+  final String tipoDespesa;
   final int codDocumento;
-  final int codLote;
+  final String tipoDocumento;
   final int codTipoDocumento;
   final String dataDocumento;
-  final int mes;
-  final String nomeFornecedor;
   final String numDocumento;
-  final String numRessarcimento;
-  final int parcela;
-  final String tipoDespesa;
-  final String tipoDocumento;
-  final String urlDocumento;
   final double valorDocumento;
-  final double valorGlosa;
+  final String urlDocumento;
+  final String nomeFornecedor;
+  final String cnpjCpfFornecedor;
   final double valorLiquido;
+  final double valorGlosa;
+  final String numRessarcimento;
+  final int codLote;
+  final int parcela;
 
   DespesaDeputado({required this.ano, required this.cnpjCpfFornecedor, required this.codDocumento, required this.codLote, required this.codTipoDocumento, required this.dataDocumento, required this.mes, required this.nomeFornecedor, required this.numDocumento, required this.numRessarcimento, required this.parcela, required this.tipoDespesa, required this.tipoDocumento, required this.urlDocumento, required this.valorDocumento, required this.valorGlosa, required this.valorLiquido});
 
@@ -42,9 +42,9 @@ class DespesaDeputado {
         tipoDespesa:       json['tipoDespesa'],
         tipoDocumento:     json['tipoDocumento'],
         urlDocumento:      json['urlDocumento'],
-        valorDocumento:    json['valorDocumento'],
-        valorGlosa:        json['valorGlosa'],
-        valorLiquido:      json['valorLiquido']
+        valorDocumento:    json['valorDocumento']?.toDouble() ?? 0.0,
+        valorGlosa:        json['valorGlosa']?.toDouble() ?? 0.0,
+        valorLiquido:      json['valorLiquido']?.toDouble() ?? 0.0
     );
   }
 
@@ -76,7 +76,7 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
   }
 
   Future<void> fetchDespesas() async {
-    final response = await http.get(Uri.parse('https://dadosabertos.camara.leg.br/api/v2/deputados/${widget.deputado.id}/despesas?ordem=ASC&ordenarPor=ano')
+    final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados/${widget.deputado.id}/despesas?ordem=ASC&ordenarPor=ano')
       .replace(queryParameters: {
         'ano': widget.ano,
         'mes': widget.mes
