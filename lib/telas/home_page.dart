@@ -185,7 +185,7 @@ class _TelaInicialState extends State<TelaInicial> {
                               color: Colors.white,
                             ),
                             width: 300,
-                            height: 80,
+                            height: 100,
                             child: const Padding(
                               padding: EdgeInsets.all(10.0),
                               child: Text(

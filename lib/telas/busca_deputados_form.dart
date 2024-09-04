@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'deputados_lista.dart';
 
 class BuscaDeputadosFormPage extends StatelessWidget {
@@ -123,6 +124,11 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                       child: TextFormField(
                         initialValue: _mes,
                         decoration: const InputDecoration(labelText: 'Mês'),
+                        keyboardType: TextInputType.datetime,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.allow(RegExp(r'[0-9/]')),
+                          LengthLimitingTextInputFormatter(10),
+                        ],
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Por favor, insira um mês';
