@@ -17,7 +17,7 @@ class BuscaDeputadosFormPage extends StatelessWidget {
           fontSize: 24,
           fontWeight: FontWeight.w600,
         ),
-        backgroundColor: const Color.fromARGB(255, 2, 132, 199),
+        backgroundColor: const Color.fromARGB(255, 5, 118, 133),
         title: const Text(
           'IFROAppFair',
         ),

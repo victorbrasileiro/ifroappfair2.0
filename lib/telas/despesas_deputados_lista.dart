@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -108,13 +107,13 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
               color: Color.fromARGB(255, 255, 255, 255),
               fontSize: 26,
               fontWeight: FontWeight.w700),
-          backgroundColor: const Color.fromARGB(255, 2, 132, 199),
+          backgroundColor: const Color.fromARGB(255, 5, 118, 133),
           title: const Text(
             'DESPESAS',
           ),
         ),
       body: _despesas.isEmpty
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : ListView.builder(
               itemCount: _despesas.length,
               itemBuilder: (context, index) {
@@ -134,7 +133,7 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
                       Icons.description_sharp,
                       size: 40,
                   ),
-                  title: Text('${despesa.tipoDespesa}',
+                  title: Text(despesa.tipoDespesa,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,

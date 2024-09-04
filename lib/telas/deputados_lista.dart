@@ -91,7 +91,7 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
               color: Color.fromARGB(255, 255, 255, 255),
               fontSize: 26,
               fontWeight: FontWeight.w700),
-          backgroundColor: const Color.fromARGB(255, 2, 132, 199),
+          backgroundColor: const Color.fromARGB(255, 5, 118, 133),
           title: const Text(
             'DEPUTADOS',
           ),
@@ -108,7 +108,7 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
           ],
         ),
         body: _deputados.isEmpty
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : ListView.builder(
             itemCount: _deputados.length,
             itemBuilder: (context, index) {
@@ -122,17 +122,17 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
               }
 
               return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 5.0),
                   decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey, width: 1.0),
-                  borderRadius: BorderRadius.circular(8.0),
+                  border: Border.all(color: Colors.blueGrey, width: 1.5),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: ListTile(
                   leading: Image.network(
-                    deputado.urlFoto, // Substitua pela URL da sua imagem
-                    width: 40, // Largura da imagem
-                    height: 50, // Altura da imagem
-                    fit: BoxFit.cover, // Ajusta a imagem de acordo com o espaço disponível
+                    deputado.urlFoto,
+                    width: 53, // Largura da imagem
+                    height: 60, // Altura da imagem
+                    fit: BoxFit.cover,
                   ),
                   title: Text(
                     deputado.nome,
