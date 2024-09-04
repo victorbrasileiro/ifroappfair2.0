@@ -124,7 +124,7 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
                       horizontal: 8.0,
                       vertical: 4.0),
                   width: 350,
-                  height: 370,
+                  height: 95,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey, width: 1.0),
                     borderRadius: BorderRadius.circular(8.0),

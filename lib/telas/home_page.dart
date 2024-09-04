@@ -58,7 +58,7 @@ class _TelaInicialState extends State<TelaInicial> {
                           // Muda a forma das bordas
                           side: BorderSide(
                               color: Color.fromARGB(255, 2, 132, 199),
-                              width: 1.0), // Muda a cor e largura das bordas
+                              width: 3.0), // Muda a cor e largura das bordas
                         ),
                         backgroundColor: const Color.fromARGB(255, 2, 132, 199),
                       ),
@@ -234,8 +234,8 @@ class _TelaInicialState extends State<TelaInicial> {
                       height: 370,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 1.0),
-                        borderRadius: BorderRadius.circular(6),
                       ),
+
                     ),
                     Column(
                       children: [
@@ -313,7 +313,6 @@ class _TelaInicialState extends State<TelaInicial> {
                       height: 370,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 1.0),
-                        borderRadius: BorderRadius.circular(6),
                       ),
                     ),
                     Column(
@@ -392,7 +391,6 @@ class _TelaInicialState extends State<TelaInicial> {
                       height: 370,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 1.0),
-                        borderRadius: BorderRadius.circular(6),
                       ),
                     ),
                     Column(
@@ -471,7 +469,6 @@ class _TelaInicialState extends State<TelaInicial> {
                       height: 370,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 1.0),
-                        borderRadius: BorderRadius.circular(6),
                       ),
                     ),
                     Column(
