@@ -170,8 +170,8 @@ class _TelaInicialState extends State<TelaInicial> {
                             height: 270,
                             child: Padding(
                               padding: const EdgeInsets.all(14.0),
-                              child: Image.network(
-                                'https://tse2.mm.bing.net/th?id=OIP.CIWdtUrm9qh1xW4nVtFXNAHaE3&pid=15.1',
+                              child: Image.asset(
+                                "assets/images/depesas.jpeg",
                                 fit: BoxFit.cover,
                               ),
                             ),

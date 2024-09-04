@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'deputados_lista.dart';
-import 'despesas_deputados_lista.dart';
 
 class BuscaDeputadosFormPage extends StatelessWidget {
   const BuscaDeputadosFormPage({super.key});
@@ -50,6 +49,8 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        centerTitle: true,
         title: const Text(
           'Busca Parlamentar',
           style: TextStyle(fontWeight: FontWeight.w700),
@@ -63,6 +64,7 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                // Campo parlamentar
                 TextFormField(
                   initialValue: _nome,
                   decoration: const InputDecoration(labelText: 'Nome do Parlamentar'),
@@ -78,6 +80,7 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                     });
                   },
                 ),
+                // Campo partido
                 TextFormField(
                   initialValue: _partido,
                   decoration: const InputDecoration(labelText: 'Partido'),
@@ -93,6 +96,7 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                     });
                   },
                 ),
+                // Campo ano e mês
                 Row(
                   children: <Widget>[
                     Expanded(
@@ -149,11 +153,11 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                           MaterialPageRoute(
                               builder: (context) =>
                                   DeputadoListPage(
-                                    nome:    _nome,
-                                    partido: _partido,
-                                    ano:     _ano,
-                                    mes:     _mes,
-                                    lista:   false
+                                      nome:    _nome,
+                                      partido: _partido,
+                                      ano:     _ano,
+                                      mes:     _mes,
+                                      lista:   false
                                   )
                           ),
                         );
@@ -183,5 +187,4 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
     );
   }
 }
-
 
