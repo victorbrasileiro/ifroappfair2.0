@@ -167,7 +167,7 @@ class _TelaInicialState extends State<TelaInicial> {
                               color: Colors.white,
                             ),
                             width: 300,
-                            height: 270,
+                            height: 250,
                             child: Padding(
                               padding: const EdgeInsets.all(14.0),
                               child: Image.asset(
@@ -227,11 +227,14 @@ class _TelaInicialState extends State<TelaInicial> {
                   alignment: AlignmentDirectional.center,
                   children: [
                     Container(
+                      margin: EdgeInsets.symmetric(
+                          horizontal: 8.0,
+                          vertical: 4.0),
                       width: 350,
                       height: 370,
                       decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey, width: 1.0),
                         borderRadius: BorderRadius.circular(6),
-                        color: Colors.white,
                       ),
                     ),
                     Column(

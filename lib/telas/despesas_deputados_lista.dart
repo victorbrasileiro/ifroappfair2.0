@@ -120,7 +120,11 @@ class _DespesasDeputadosListPageState extends State<DespesasDeputadosListPage> {
               itemBuilder: (context, index) {
                 final despesa = _despesas[index];
                 return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 8.0,
+                      vertical: 4.0),
+                  width: 350,
+                  height: 370,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey, width: 1.0),
                     borderRadius: BorderRadius.circular(8.0),
