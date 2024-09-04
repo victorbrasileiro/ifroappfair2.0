@@ -81,9 +81,15 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                     width: 350,
                     height: 330,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey, width: 1.0),
+                      border: Border.all(color: Colors.grey, width: 0.4),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.blueGrey.withOpacity(0.2),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                        ),
+                      ]
                     ),
-
                   ),
                   Column(
                     children: [
@@ -162,9 +168,15 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                     width: 350,
                     height: 330,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey, width: 1.0),
+                        border: Border.all(color: Colors.grey, width: 0.4),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blueGrey.withOpacity(0.2),
+                            spreadRadius: 4,
+                            blurRadius: 5,
+                          ),
+                        ]
                     ),
-
                   ),
                   Column(
                     children: [
@@ -243,7 +255,14 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                     width: 350,
                     height: 330,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey, width: 1.0),
+                        border: Border.all(color: Colors.grey, width: 0.4),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blueGrey.withOpacity(0.2),
+                            spreadRadius: 4,
+                            blurRadius: 5,
+                          ),
+                        ]
                     ),
                   ),
                   Column(
@@ -323,7 +342,14 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                     width: 350,
                     height: 330,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey, width: 1.0),
+                        border: Border.all(color: Colors.grey, width: 0.4),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blueGrey.withOpacity(0.2),
+                            spreadRadius: 4,
+                            blurRadius: 5,
+                          ),
+                        ]
                     ),
                   ),
                   Column(
