@@ -77,7 +77,7 @@ class _TelaInicialState extends State<TelaInicial> {
                   children: [
                     Container(
                       child: const Padding(
-                        padding: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.all(10.0),
                         child: Center(
                           child: Text(
                                 'Clique no botão abaixo para conferir as despesas de cada parlamentar no ano de 2024.',

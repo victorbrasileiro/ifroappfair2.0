@@ -325,7 +325,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 380,
+                    height: 390,
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 0.4),
                         boxShadow: [
