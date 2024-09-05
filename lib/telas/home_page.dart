@@ -111,11 +111,8 @@ class _TelaInicialState extends State<TelaInicial> {
                         MaterialPageRoute(
                             builder: (context) =>
                                 const DeputadoListPage(
-                                    nome: '',
-                                    partido: '',
                                     ano: '',
-                                    mes: '',
-                                    lista: true
+                                    mes: ''
                                 )),
                       );
                     },

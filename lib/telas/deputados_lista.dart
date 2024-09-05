@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:projetoflutter/telas/deputados_lista_delegate.dart';
-import 'despesas_deputados_lista.dart';
+import 'busca_deputados_form.dart';
 
 class Deputado {
   final int id;
@@ -34,13 +34,10 @@ class Deputado {
 }
 
 class DeputadoListPage extends StatefulWidget {
-  final String nome;
-  final String partido;
   final String ano;
   final String mes;
-  final bool lista;
 
-  const DeputadoListPage({super.key, required this.nome, required this.partido, required this.ano, required this.mes, required this.lista});
+  const DeputadoListPage({super.key, required this.ano, required this.mes});
 
   @override
   _DeputadoListPageState createState() => _DeputadoListPageState();
@@ -56,18 +53,6 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
   }
 
   Future<void> _fetchDeputados() async {
-    // if (widget.lista){
-    //   //final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
-    //   final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
-    // }else{
-    //   final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados/deputado')
-    //     .replace(queryParameters: {
-    //       'nome': widget.nome,
-    //       'partido': widget.partido
-    //     })
-    //   );
-    // }
-
     final response = await http.get(Uri.parse('http://10.0.2.2:3000/deputados'));
 
     if  (response.statusCode == 200) {
@@ -158,11 +143,15 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            DespesasDeputadosListPage(
-                              deputado: deputado,
-                              mes: mes,
-                              ano: ano
-                            )),
+                            BuscaDeputadosFormPage(
+                              deputado: deputado
+                            )
+                            // DespesasDeputadosListPage(
+                            //   deputado: deputado,
+                            //   mes: mes,
+                            //   ano: ano
+                            // )
+                    ),
                   );
                 },
                 ),

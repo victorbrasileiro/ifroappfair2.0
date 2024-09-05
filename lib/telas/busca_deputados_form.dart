@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:projetoflutter/telas/despesas_deputados_lista.dart';
 import 'deputados_lista.dart';
 
 class BuscaDeputadosFormPage extends StatelessWidget {
-  const BuscaDeputadosFormPage({super.key});
+  final Deputado deputado;
+
+  const BuscaDeputadosFormPage({super.key, required this.deputado});
 
   @override
   Widget build(BuildContext context) {
@@ -22,29 +25,32 @@ class BuscaDeputadosFormPage extends StatelessWidget {
           'IFROAppFair',
         ),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(14.0),
-        child: BuscaDeputadosForm(),
+      body: Padding(
+        padding: const EdgeInsets.all(14.0),
+        child: BuscaDeputadosForm(deputado: deputado), // Removido 'const' e 'this'
       ),
     );
   }
 }
 
 class BuscaDeputadosForm extends StatefulWidget {
-  const BuscaDeputadosForm({super.key});
+  final Deputado deputado;
+
+  const BuscaDeputadosForm({required this.deputado});
 
   @override
   _BuscaDeputadosFormState createState() =>
-      _BuscaDeputadosFormState();
+      _BuscaDeputadosFormState(deputado: deputado);
 }
 
 class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
   final _formKey = GlobalKey<FormState>();
 
-  String _nome    = '';
-  String _partido = '';
-  String _ano     = '';
-  String _mes     = '';
+  final Deputado deputado;
+  int _ano = 2024;
+  String _mes = '';
+
+  _BuscaDeputadosFormState({required this.deputado});
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +73,7 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
               children: <Widget>[
                 // Campo parlamentar
                 TextFormField(
-                  initialValue: _nome,
+                  initialValue: deputado.nome,
                   decoration: const InputDecoration(labelText: 'Nome do Parlamentar'),
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -75,15 +81,10 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                     }
                     return null;
                   },
-                  onChanged: (value) {
-                    setState(() {
-                      _nome = value;
-                    });
-                  },
                 ),
                 // Campo partido
                 TextFormField(
-                  initialValue: _partido,
+                  initialValue: deputado.siglaPartido,
                   decoration: const InputDecoration(labelText: 'Partido'),
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -91,31 +92,21 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                     }
                     return null;
                   },
-                  onChanged: (value) {
-                    setState(() {
-                      _partido = value;
-                    });
-                  },
                 ),
                 // Campo ano e mês
                 Row(
                   children: <Widget>[
                     Expanded(
                       child: TextFormField(
-                        initialValue: _ano,
+                        initialValue: _ano.toString(),
                         enabled: false,
-                        // Disable editing for the year field
+                        // Desativado para edição
                         decoration: const InputDecoration(labelText: 'Ano'),
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Insira um ano por favor';
                           }
                           return null;
-                        },
-                        onChanged: (value) {
-                          setState(() {
-                            _ano = value;
-                          });
                         },
                       ),
                     ),
@@ -127,7 +118,7 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                         keyboardType: TextInputType.datetime,
                         inputFormatters: [
                           FilteringTextInputFormatter.allow(RegExp(r'[0-9/]')),
-                          LengthLimitingTextInputFormatter(10),
+                          LengthLimitingTextInputFormatter(2), // Limitado a 2 caracteres para o mês
                         ],
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -158,14 +149,11 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  DeputadoListPage(
-                                      nome:    _nome,
-                                      partido: _partido,
-                                      ano:     _ano,
-                                      mes:     _mes,
-                                      lista:   false
-                                  )
-                          ),
+                                  DespesasDeputadosListPage(
+                                    deputado: deputado,
+                                    ano: _ano.toString(),
+                                    mes: _mes,
+                                  )),
                         );
                       }
                     },
@@ -193,4 +181,3 @@ class _BuscaDeputadosFormState extends State<BuscaDeputadosForm> {
     );
   }
 }
-
