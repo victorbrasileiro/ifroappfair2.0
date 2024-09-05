@@ -280,7 +280,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                             IconButton(
                               icon: FaIcon(FontAwesomeIcons.github),
                               onPressed: () {
-                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/devggustavo")).then((_) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text("Link do GitHub copiado!")),
                                   );
@@ -297,7 +297,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                               icon: FaIcon(FontAwesomeIcons.linkedin),
                               onPressed: () {
                                 Clipboard.setData(const ClipboardData(
-                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                    text: "https://www.linkedin.com/in/devgustavo/")).then((_) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text("Link do LinkeDin copiado!")),
                                   );
@@ -402,7 +402,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                             IconButton(
                               icon: FaIcon(FontAwesomeIcons.github),
                               onPressed: () {
-                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/VitoriaCristine")).then((_) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text("Link do GitHub copiado!")),
                                   );
@@ -419,7 +419,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                               icon: FaIcon(FontAwesomeIcons.linkedin),
                               onPressed: () {
                                 Clipboard.setData(const ClipboardData(
-                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                    text: "https://www.linkedin.com/in/vit%C3%B3ria-cristine-566362285/")).then((_) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text("Link do LinkeDin copiado!")),
                                   );
@@ -524,7 +524,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                             IconButton(
                               icon: FaIcon(FontAwesomeIcons.github),
                               onPressed: () {
-                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/LevirMenezes")).then((_) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text("Link do GitHub copiado!")),
                                   );
@@ -541,7 +541,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                               icon: FaIcon(FontAwesomeIcons.linkedin),
                               onPressed: () {
                                 Clipboard.setData(const ClipboardData(
-                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                    text: "https://www.linkedin.com/in/levir-menezes-dev/")).then((_) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text("Link do LinkeDin copiado!")),
                                   );
