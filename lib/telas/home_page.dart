@@ -151,8 +151,8 @@ class _TelaInicialState extends State<TelaInicial> {
                   alignment: AlignmentDirectional.center,
                   children: [
                     Container(
-                      width: 390,
-                      height: 1070,
+                      width: 400,
+                      height: 1090,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
                         color: const Color.fromARGB(255, 5, 118, 133),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class EquipeDesenvolvimento extends StatefulWidget {
   const EquipeDesenvolvimento({super.key});
@@ -79,7 +81,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 330,
+                    height: 390,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 0.4),
                       boxShadow: [
@@ -149,6 +151,41 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                           ),
                         ),
                       ),
+                      Positioned(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.github),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do GitHub copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                            const SizedBox(
+                                width: 5,
+                                height: 30,
+                            ),
+                            // Ícone LinkedIn
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(
+                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do LinkeDin copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -166,7 +203,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 330,
+                    height: 390,
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 0.4),
                         boxShadow: [
@@ -236,6 +273,41 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                           ),
                         ),
                       ),
+                      Positioned(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.github),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do GitHub copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                              height: 30,
+                            ),
+                            // Ícone LinkedIn
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(
+                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do LinkeDin copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -253,7 +325,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 330,
+                    height: 380,
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 0.4),
                         boxShadow: [
@@ -323,6 +395,41 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                           ),
                         ),
                       ),
+                      Positioned(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.github),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do GitHub copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                              height: 30,
+                            ),
+                            // Ícone LinkedIn
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(
+                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do LinkeDin copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -340,7 +447,7 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                         horizontal: 8.0,
                         vertical: 4.0),
                     width: 350,
-                    height: 330,
+                    height: 390,
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey, width: 0.4),
                         boxShadow: [
@@ -408,6 +515,41 @@ class _TelaEquipe extends State<EquipeDesenvolvimento> {
                               ],
                             ),
                           ),
+                        ),
+                      ),
+                      Positioned(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.github),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(text: "https://github.com/victorbrasileiro")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do GitHub copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                              height: 30,
+                            ),
+                            // Ícone LinkedIn
+                            IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              onPressed: () {
+                                Clipboard.setData(const ClipboardData(
+                                    text: "https://www.linkedin.com/in/victorbrasileiroo/")).then((_) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Link do LinkeDin copiado!")),
+                                  );
+                                });
+                              },
+                              iconSize: 30,
+                            ),
+                          ],
                         ),
                       ),
                     ],
