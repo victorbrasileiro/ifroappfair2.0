@@ -18,13 +18,11 @@ class _TelaInicialState extends State<TelaInicial> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        titleTextStyle: const TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255),
-            fontSize: 26,
-            fontWeight: FontWeight.w700),
         backgroundColor: const Color.fromARGB(255, 5, 118, 133),
-        title: const Text(
-          'IFROAppFair',
+        title: Image.asset(
+          'assets/images/logo.png', // Caminho da sua imagem
+          height: 130, // Ajuste o tamanho conforme necessário
+          fit: BoxFit.contain, // Garante que a imagem se ajuste ao AppBar
         ),
       ),
       body: SingleChildScrollView(
@@ -77,7 +75,7 @@ class _TelaInicialState extends State<TelaInicial> {
                   children: [
                     Container(
                       child: const Padding(
-                        padding: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.all(10.0),
                         child: Center(
                           child: Text(
                                 'Clique no botão abaixo para conferir as despesas de cada parlamentar no ano de 2024.',

@@ -72,13 +72,11 @@ class _DeputadoListPageState extends State<DeputadoListPage> {
     return Scaffold (
         appBar: AppBar(
           centerTitle: true,
-          titleTextStyle: const TextStyle(
-              color: Color.fromARGB(255, 255, 255, 255),
-              fontSize: 26,
-              fontWeight: FontWeight.w700),
           backgroundColor: const Color.fromARGB(255, 5, 118, 133),
-          title: const Text(
-            'DEPUTADOS',
+          title: Image.asset(
+            'assets/images/logoDeputados.png', // Caminho da sua imagem
+            height: 130, // Ajuste o tamanho conforme necessário
+            fit: BoxFit.contain,
           ),
           actions: [
             IconButton(
